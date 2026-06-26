@@ -72,7 +72,7 @@ export default function OperationsMap() {
         
         // Find MA & MP to fit bounds
         const targetStates = geoData.features.filter(f => 
-          f.properties.name === "Maharashtra" || f.properties.name === "Madhya Pradesh"
+          f.properties?.name === "Maharashtra" || f.properties?.name === "Madhya Pradesh"
         );
         
         const targetFeatureCollection = { type: "FeatureCollection", features: targetStates } as d3.ExtendedFeatureCollection;
@@ -86,7 +86,7 @@ export default function OperationsMap() {
           .join("path")
           .attr("d", path as any)
           .attr("fill", d => {
-            const name = d.properties.name;
+            const name = d.properties?.name;
             if (name === "Maharashtra") return "#C9A96E"; // amber-gold
             if (name === "Madhya Pradesh") return "#4A7C59"; // forest green
             return "#CBD5E1"; // muted gray
