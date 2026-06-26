@@ -179,7 +179,7 @@ export default function Benefits() {
                   Every Flow Up bottle is designed for the circular economy. From the cap to the base, our materials are 100% recyclable, ensuring that our footprint is minimized and plastic stays out of our oceans.
                 </p>
              </motion.div>
-             <motion.div variants={revealVariants} initial="initial" whileInView="whileInView" viewport={{ once: true, delay: 0.2 }} className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 p-10 rounded-3xl">
+             <motion.div variants={revealVariants} initial="initial" whileInView="whileInView" viewport={{ once: true }} className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 p-10 rounded-3xl">
                 <Leaf size={48} className="text-gold mb-6" />
                 <h3 className="text-2xl font-serif mb-4">Ethical & Sustainable Sourcing</h3>
                 <p className="text-gray-400 leading-relaxed">
