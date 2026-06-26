@@ -68,7 +68,7 @@ export default function OperationsMap() {
         const topoData = await response.json();
         
         // Convert to GeoJSON
-        const geoData = topojson.feature(topoData, topoData.objects.default) as d3.ExtendedFeatureCollection;
+        const geoData = topojson.feature(topoData, topoData.objects.default) as unknown as d3.ExtendedFeatureCollection;
         
         // Find MA & MP to fit bounds
         const targetStates = geoData.features.filter(f => 
