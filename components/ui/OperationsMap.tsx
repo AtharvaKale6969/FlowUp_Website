@@ -107,7 +107,7 @@ export default function OperationsMap() {
             .data(targetStates)
             .join("text")
             .attr("class", "state-label")
-            .text(d => d.properties.name.toUpperCase())
+            .text(d => d.properties?.name?.toUpperCase() || "")
             .attr("x", d => path.centroid(d as any)[0])
             .attr("y", d => path.centroid(d as any)[1])
             .attr("text-anchor", "middle")
