@@ -55,7 +55,7 @@ export default function SecondBrandStatsDashboard() {
               variants={revealVariants} 
               initial="initial" 
               whileInView="whileInView" 
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: true, margin: "-20px" }}
             >
               <span className="eyebrow block mb-4 text-gold font-semibold tracking-wider uppercase text-sm">Local Presence</span>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
@@ -75,7 +75,7 @@ export default function SecondBrandStatsDashboard() {
               variants={staggerContainerVariants} 
               initial="initial" 
               whileInView="animate" 
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: true, margin: "-20px" }}
               className="grid grid-cols-2 gap-4"
             >
               {stats.map((stat, i) => (
@@ -114,7 +114,7 @@ export default function SecondBrandStatsDashboard() {
             variants={revealVariants} 
             initial="initial" 
             whileInView="whileInView" 
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: "-20px" }}
             className="w-full lg:w-[55%] min-h-[400px] lg:min-h-full rounded-3xl overflow-hidden shadow-xl border border-gray-100 bg-gray-50 relative flex items-center justify-center p-8"
           >
             <div className="relative w-full h-full min-h-[400px]">

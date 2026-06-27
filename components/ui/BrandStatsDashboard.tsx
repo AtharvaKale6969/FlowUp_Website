@@ -21,7 +21,7 @@ export default function BrandStatsDashboard() {
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: "-20px" }}
             transition={{ duration: 0.8 }}
             className="w-full md:w-1/2 flex justify-center md:justify-end"
           >
@@ -41,7 +41,7 @@ export default function BrandStatsDashboard() {
             variants={revealVariants} 
             initial="initial" 
             whileInView="whileInView" 
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: "-20px" }}
             className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left"
           >
             <span className="eyebrow block mb-4 text-gold font-semibold tracking-wider uppercase text-sm">Our Legacy</span>

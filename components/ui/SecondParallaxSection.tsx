@@ -22,12 +22,12 @@ export default function SecondParallaxSection() {
         {
           opacity: 1, 
           y: 0,
-          stagger: 0.4, // Slower stagger
-          duration: 1.5, // Slower duration
+          stagger: 0.15,
+          duration: 0.8,
           ease: "power3.out",
           scrollTrigger: {
             trigger: textRef.current,
-            start: "top 75%",
+            start: "top 85%",
           }
         }
       );

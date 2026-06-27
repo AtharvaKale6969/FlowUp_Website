@@ -4,8 +4,8 @@
 export const revealVariants = {
   initial: { opacity: 0, y: 40 },
   whileInView: { opacity: 1, y: 0 },
-  transition: { duration: 0.65, ease: "easeOut" },
-  viewport: { once: true, margin: "-80px" }
+  transition: { duration: 0.5, ease: "easeOut" },
+  viewport: { once: true, margin: "-20px" }
 };
 
 // Card hover
