@@ -30,6 +30,7 @@ export default function BrandStatsDashboard() {
                 src="/images/Clients%20&%20Strategic%20Partners/Aayuneer%20logo_new_4k.png"
                 alt="Aayuneer Enterprises Logo"
                 fill
+                sizes="(max-width: 768px) 300px, 400px"
                 className="object-contain drop-shadow-2xl"
               />
             </div>

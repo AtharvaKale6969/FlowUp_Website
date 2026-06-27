@@ -74,9 +74,10 @@ export default function HeroCinematic() {
             src="/images/Hero_Home.png" 
             alt="Hero Background" 
             fill 
+            sizes="100vw"
             className="object-cover object-center opacity-90"
             priority
-            quality={100}
+            quality={90}
           />
           {/* Subtle gradient for contrast at bottom and top */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60" />
@@ -95,7 +96,8 @@ export default function HeroCinematic() {
           <Image 
             src="/images/Flow%20up%20bottle_final_hero.png" 
             alt="Flow Up Premium Water Bottle" 
-            fill 
+            fill
+            sizes="(max-width: 768px) 80vw, 30vw"
             className="object-contain drop-shadow-[0_30px_60px_rgba(0,0,0,0.8)]"
             priority
           />
