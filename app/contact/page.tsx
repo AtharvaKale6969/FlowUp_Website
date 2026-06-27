@@ -80,7 +80,7 @@ export default function Contact() {
       <div className="container mx-auto px-6 max-w-6xl">
         
         {/* Introductory Content */}
-        <div className="max-w-3xl mb-16 lg:mb-24">
+        <div className="max-w-3xl mx-auto mb-16 lg:mb-24 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
