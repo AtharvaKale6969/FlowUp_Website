@@ -13,25 +13,32 @@ export default function Order() {
   const [activeTab, setActiveTab] = useState<"500ml" | "1L">("500ml");
   const [activeImageIndex, setActiveImageIndex] = useState(0);
 
-  const productImages = [
-    "/images/bottle.png",
-    "/images/FLOWUP_1st.png",
-    "/images/FLOWUP_1st_ripple.png",
-    "/images/Flowup_Bottle_new_clear_bg.png"
-  ];
-
   const products = {
     "500ml": {
       title: "Flow Up 500ml",
       pack: "Pack of 24",
       price: "₹170",
-      description: "Perfect for on-the-go hydration. Our 500ml bottles come in a convenient pack of 24, ensuring you stay refreshed whether you're at the gym, in the office, or running errands."
+      description: "Perfect for on-the-go hydration. Our 500ml bottles come in a convenient pack of 24, ensuring you stay refreshed whether you're at the gym, in the office, or running errands.",
+      images: [
+        "/images/500ml 24bottles.jpeg",
+        "/images/bottle.png",
+        "/images/Shop_1.jpg",
+        "/images/Shop_3.jpg",
+        "/images/Flow_up_shop_5.png"
+      ]
     },
     "1L": {
       title: "Flow Up 1 Litre",
       pack: "Pack of 12",
       price: "₹140",
-      description: "Ideal for daily home use or long road trips. Our 1 Litre bottles come in a pack of 12, offering exceptional value and pure, crystal clear hydration for the whole family."
+      description: "Ideal for daily home use or long road trips. Our 1 Litre bottles come in a pack of 12, offering exceptional value and pure, crystal clear hydration for the whole family.",
+      images: [
+        "/images/1L 12bottles.png",
+        "/images/bottle.png",
+        "/images/Shop_1.jpg",
+        "/images/Shop_3.jpg",
+        "/images/Flow_up_shop_5.png"
+      ]
     }
   };
 
@@ -114,7 +121,7 @@ export default function Order() {
                   className="absolute inset-12"
                 >
                   <Image 
-                    src={productImages[activeImageIndex]} 
+                    src={currentProduct.images[activeImageIndex]} 
                     alt={`Flow Up Product View ${activeImageIndex + 1}`} 
                     fill 
                     className="object-contain drop-shadow-2xl transition-transform duration-700 group-hover:scale-105" 
@@ -130,7 +137,7 @@ export default function Order() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="flex items-center gap-3 overflow-x-auto pb-4 snap-x hide-scrollbar"
             >
-              {productImages.map((img, idx) => (
+              {currentProduct.images.map((img, idx) => (
                 <button
                   key={idx}
                   onClick={() => setActiveImageIndex(idx)}
@@ -282,6 +289,65 @@ export default function Order() {
 
           </motion.div>
         </div>
+
+        {/* Mineral Composition Section */}
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="max-w-4xl mx-auto mb-24 pt-20 border-t border-gray-100"
+        >
+          <div className="text-center mb-12">
+            <span className="eyebrow block mb-4 text-gold">Purity in Every Drop</span>
+            <h2 className="text-3xl md:text-4xl font-serif text-gray-900 mb-4">Mineral Composition</h2>
+            <p className="text-gray-500 max-w-2xl mx-auto">
+              Our natural spring water is carefully filtered to preserve essential life-enhancing minerals, ensuring perfect balance and taste.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100/60 overflow-hidden relative">
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold to-transparent opacity-50" />
+            <table className="w-full text-left border-collapse">
+              <thead>
+                <tr className="bg-gray-50/50 border-b border-gray-100">
+                  <th className="py-6 px-8 font-serif font-semibold text-gray-900 text-lg w-2/3">Parameter</th>
+                  <th className="py-6 px-8 font-serif font-semibold text-gray-900 text-lg text-right w-1/3">Typical Value</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-50">
+                <tr className="hover:bg-gray-50/80 transition-colors group">
+                  <td className="py-5 px-8 text-gray-600 font-medium group-hover:text-gray-900 transition-colors">Energy</td>
+                  <td className="py-5 px-8 text-gray-900 font-semibold text-right">0 Kcal</td>
+                </tr>
+                <tr className="hover:bg-gray-50/80 transition-colors group">
+                  <td className="py-5 px-8 text-gray-600 font-medium group-hover:text-gray-900 transition-colors">Carbohydrates</td>
+                  <td className="py-5 px-8 text-gray-900 font-semibold text-right">0 g</td>
+                </tr>
+                <tr className="hover:bg-gray-50/80 transition-colors group">
+                  <td className="py-5 px-8 text-gray-600 font-medium group-hover:text-gray-900 transition-colors">Calcium</td>
+                  <td className="py-5 px-8 text-gray-900 font-semibold text-right">1.0 mg</td>
+                </tr>
+                <tr className="hover:bg-gray-50/80 transition-colors group">
+                  <td className="py-5 px-8 text-gray-600 font-medium group-hover:text-gray-900 transition-colors">Sodium</td>
+                  <td className="py-5 px-8 text-gray-900 font-semibold text-right">1.0 mg</td>
+                </tr>
+                <tr className="hover:bg-gray-50/80 transition-colors group">
+                  <td className="py-5 px-8 text-gray-600 font-medium group-hover:text-gray-900 transition-colors">Magnesium</td>
+                  <td className="py-5 px-8 text-gray-900 font-semibold text-right">0.5 mg</td>
+                </tr>
+                <tr className="hover:bg-gray-50/80 transition-colors group">
+                  <td className="py-5 px-8 text-gray-600 font-medium group-hover:text-gray-900 transition-colors">Total Dissolved Solids (TDS)</td>
+                  <td className="py-5 px-8 text-gray-900 font-semibold text-right">~ 75 mg/L</td>
+                </tr>
+                <tr className="hover:bg-gray-50/80 transition-colors group">
+                  <td className="py-5 px-8 text-gray-600 font-medium group-hover:text-gray-900 transition-colors">pH Value</td>
+                  <td className="py-5 px-8 text-gray-900 font-semibold text-right">7.4 ± 0.2</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </motion.div>
 
         {/* FAQ Section */}
         <motion.div variants={revealVariants} initial="initial" whileInView="whileInView" viewport={{ once: true }} className="max-w-3xl mx-auto pt-20 border-t border-gray-100">

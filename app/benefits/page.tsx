@@ -238,6 +238,66 @@ export default function Benefits() {
         </div>
       </section>
 
+      {/* 5. Benefits of Drinking Mineral Water */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="container mx-auto px-6 max-w-7xl relative z-10">
+          <motion.div variants={revealVariants} initial="initial" whileInView="whileInView" viewport={{ once: true }} className="text-center mb-16">
+            <span className="eyebrow text-gold block mb-4">Complete Wellness</span>
+            <h2>Benefits of Drinking Mineral Water</h2>
+            <p className="text-gray-600 mt-4 max-w-2xl mx-auto">Discover the profound impact that proper hydration with premium mineral water can have on your daily life and our world.</p>
+          </motion.div>
+
+          <motion.div 
+            variants={staggerContainerVariants}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, margin: "-50px" }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            {[
+              {
+                icon: <Droplets size={28} />,
+                title: "Quality Hydration",
+                desc: "Mineral water not only refreshes your body but also contains naturally occurring minerals that support your daily well-being, making every sip a healthy choice."
+              },
+              {
+                icon: <Sun size={28} />,
+                title: "Daily Hydration Tips",
+                desc: "Staying hydrated doesn't have to be complicated. Simply drinking water regularly throughout the day can help you feel more energized, focused, and ready to take on your daily activities."
+              },
+              {
+                icon: <ShieldCheck size={28} />,
+                title: "Quality & Purification",
+                desc: "Every bottle of water should give you complete peace of mind. That's why we focus on careful purification, strict quality checks, and hygienic packaging to ensure every sip is clean, safe, and refreshing."
+              },
+              {
+                icon: <HeartPulse size={28} />,
+                title: "Health Benefits",
+                desc: "Water is essential for keeping your body functioning at its best. From supporting digestion to maintaining energy and helping regulate body temperature, staying hydrated is one of the simplest ways to care for your health."
+              },
+              {
+                icon: <Recycle size={28} />,
+                title: "Environmental Responsibility",
+                desc: "Looking after the environment is a responsibility we all share. By recycling plastic bottles and making mindful choices, together we can reduce waste and help build a cleaner, greener future."
+              },
+              {
+                icon: <Activity size={28} />,
+                title: "Updates & Insights",
+                desc: "At Flow Up, we're always moving forward. Stay connected with us for updates on our latest products, company milestones, and insights into the evolving world of hydration and bottled water."
+              }
+            ].map((item, i) => (
+              <motion.div key={i} variants={staggerItemVariants} className="bg-gray-50 rounded-3xl p-8 border border-gray-100 hover:border-gold/30 hover:shadow-lg hover:shadow-gold/5 transition-all duration-300 group">
+                <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-gold mb-6 group-hover:scale-110 transition-transform shadow-sm">
+                  {item.icon}
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
+                <p className="text-gray-600 leading-relaxed text-sm">{item.desc}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="bg-[#0a0a0a] text-center py-24 px-6 relative overflow-hidden">
         <div className="absolute top-0 left-1/2 w-[800px] h-[800px] bg-blue-900 rounded-full blur-[150px] opacity-20 -translate-x-1/2 -translate-y-1/2 pointer-events-none" />

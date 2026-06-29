@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send, MessageCircle, Headphones, Globe } from "lucide-react";
+import { Mail, Phone, MapPin, Send, MessageCircle, Headphones, Globe, Clock, Building } from "lucide-react";
 
 const Instagram = ({ size = 24, className = "" }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
@@ -117,7 +117,10 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="text-lg mb-1 font-medium text-gray-900">Email</h3>
-                  <a href="mailto:sales@flowupdrinks.com" className="text-gray-900 font-medium hover:text-gold transition-colors">sales@flowupdrinks.com</a>
+                  <div className="flex flex-col gap-1">
+                    <a href="mailto:aayuneer.enterprises@gmail.com" className="text-gray-900 font-medium hover:text-gold transition-colors">aayuneer.enterprises@gmail.com</a>
+                    <a href="mailto:sales@flowupdrinks.com" className="text-gray-900 font-medium hover:text-gold transition-colors">sales@flowupdrinks.com</a>
+                  </div>
                 </div>
               </div>
 
@@ -128,8 +131,8 @@ export default function Contact() {
                 <div>
                   <h3 className="text-lg mb-1 font-medium text-gray-900">Contact</h3>
                   <div className="flex flex-col gap-1">
+                    <a href="tel:+919049906432" className="text-gray-900 font-medium hover:text-gold transition-colors">+91 9049906432</a>
                     <a href="tel:+919763562944" className="text-gray-900 font-medium hover:text-gold transition-colors">+91 9763562944</a>
-                    <a href="tel:+917123100024" className="text-gray-900 font-medium hover:text-gold transition-colors">+91 7123100024</a>
                   </div>
                 </div>
               </div>
@@ -140,7 +143,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="text-lg mb-1 font-medium text-gray-900">Register Office</h3>
-                  <address className="text-gray-900 font-medium not-italic leading-relaxed">
+                  <address className="text-gray-900 font-medium not-italic leading-relaxed mb-2">
                     Plot no 12A, 1st Floor, Smruti Nagar Rd,<br />
                     Smruti Nagar, Koradi, Bokara,<br />
                     Nagpur, Maharashtra 441111
@@ -148,13 +151,36 @@ export default function Contact() {
                 </div>
               </div>
 
+              <div className="flex items-start">
+                <div className="bg-gray-50 w-12 h-12 rounded-full flex items-center justify-center text-gold flex-shrink-0 mr-4">
+                  <Building size={20} />
+                </div>
+                <div>
+                  <h3 className="text-lg mb-1 font-medium text-gray-900">Warehouse Address</h3>
+                  <address className="text-gray-900 font-medium not-italic leading-relaxed mb-2">
+                    At Post Saoner, Railwaystation Road, 441107<br />
+                    Dist - Nagpur, Maharashtra
+                  </address>
+                </div>
+              </div>
+
+              <div className="flex items-start">
+                <div className="bg-gray-50 w-12 h-12 rounded-full flex items-center justify-center text-gold flex-shrink-0 mr-4">
+                  <Clock size={20} />
+                </div>
+                <div>
+                  <h3 className="text-lg mb-1 font-medium text-gray-900">Business Hours</h3>
+                  <p className="text-gray-900 font-medium">9:00 AM to 9:00 PM</p>
+                </div>
+              </div>
+
               <div className="pt-8 border-t border-gray-100">
                 <h3 className="text-lg mb-4 font-medium text-gray-900">Connect with us on social media</h3>
                 <div className="flex gap-4">
-                  <a href="#" className="w-10 h-10 bg-gray-50 rounded-full flex items-center justify-center text-gray-900 hover:text-white hover:bg-gold transition-colors">
+                  <a href="https://www.instagram.com/flowupdrinks?igsh=czFqOTg2bWZveHRn&utm_source=qr" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gray-50 rounded-full flex items-center justify-center text-gray-900 hover:text-white hover:bg-gold transition-colors">
                     <Instagram size={18} />
                   </a>
-                  <a href="#" className="w-10 h-10 bg-gray-50 rounded-full flex items-center justify-center text-gray-900 hover:text-white hover:bg-gold transition-colors">
+                  <a href="https://www.facebook.com/share/1Dk41dAiaP/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gray-50 rounded-full flex items-center justify-center text-gray-900 hover:text-white hover:bg-gold transition-colors">
                     <Facebook size={18} />
                   </a>
                   <a href="#" className="w-10 h-10 bg-gray-50 rounded-full flex items-center justify-center text-gray-900 hover:text-white hover:bg-gold transition-colors" aria-label="X (Twitter)">

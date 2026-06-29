@@ -49,10 +49,13 @@ export default function Footer() {
 
           <div className="flex flex-col space-y-4 items-center">
             <h4 className="text-lg font-serif font-semibold text-white mb-2">Contact Us</h4>
-            <a href="mailto:sales@flowupdrinks.com" className="text-gray-400 hover:text-gold transition-colors text-sm">sales@flowupdrinks.com</a>
             <div className="text-gray-400 text-sm flex flex-col items-center gap-1">
+              <a href="mailto:aayuneer.enterprises@gmail.com" className="hover:text-gold transition-colors">aayuneer.enterprises@gmail.com</a>
+              <a href="mailto:sales@flowupdrinks.com" className="hover:text-gold transition-colors">sales@flowupdrinks.com</a>
+            </div>
+            <div className="text-gray-400 text-sm flex flex-col items-center gap-1">
+              <a href="tel:+919049906432" className="hover:text-gold transition-colors">+91 9049906432</a>
               <a href="tel:+919763562944" className="hover:text-gold transition-colors">+91 9763562944</a>
-              <a href="tel:+917123100024" className="hover:text-gold transition-colors">+91 7123100024</a>
             </div>
             <p className="text-gray-400 text-sm max-w-[280px] text-center">Plot no 12A, 1st Floor, Smruti Nagar Rd, Smruti Nagar, Koradi, Bokara, Nagpur Maharashtra 441111</p>
           </div>
@@ -60,10 +63,10 @@ export default function Footer() {
           <div className="flex flex-col space-y-4 items-center md:items-end">
             <h4 className="text-lg font-serif font-semibold text-white mb-2">Follow Us</h4>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold transition-colors">
+              <a href="https://www.instagram.com/flowupdrinks?igsh=czFqOTg2bWZveHRn&utm_source=qr" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold transition-colors">
                 <Instagram size={18} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold transition-colors">
+              <a href="https://www.facebook.com/share/1Dk41dAiaP/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold transition-colors">
                 <Facebook size={18} />
               </a>
               <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold transition-colors" aria-label="X (Twitter)">
